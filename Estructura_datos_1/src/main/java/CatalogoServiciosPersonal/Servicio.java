@@ -3,6 +3,8 @@ package CatalogoServiciosPersonal;
 public class Servicio {
 
     // Atributos privados
+    private int id;
+    private String nombre;
     private String descripcion;
     private double costo;
     private int cantidadPersonasACargo;
@@ -12,13 +14,31 @@ public class Servicio {
     }
 
     // Constructor con parámetros
-    public Servicio(String descripcion, double costo, int cantidadPersonasACargo) {
+    public Servicio(int id, String nombre, String descripcion, double costo, int cantidadPersonasACargo) {
+        this.id = id;        
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = costo;
         this.cantidadPersonasACargo = cantidadPersonasACargo;
     }
-
+    
     // Getters y Setters para cada atributo
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {    
+        this.nombre = nombre;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }
