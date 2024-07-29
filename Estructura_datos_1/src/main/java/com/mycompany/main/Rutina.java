@@ -1,14 +1,17 @@
 package com.mycompany.main;
 
+import CatalogoServiciosPersonal.RutinaPersonalLDC;
 import javax.swing.JOptionPane;
 
 public class Rutina {
     private Pila pila;
     private RutinaCola r_cola;
+    RutinaPersonalLDC rutinaPersonal;
 
     public Rutina() {
         pila = new Pila();
         r_cola = new RutinaCola();
+        rutinaPersonal = new RutinaPersonalLDC();
     }
 
     public Usuario crearUsuario(String nombre, String apellido, String nickname, String password) { //Apila los usuarios, crea un nuevo usuario y nodo al mismo tiempo
