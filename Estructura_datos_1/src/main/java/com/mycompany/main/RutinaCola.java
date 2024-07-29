@@ -34,13 +34,8 @@ public class RutinaCola {
     }
     
     //Método para agregar un Servicio
-    public void agregarServicio(){
-        Servicio servicio = new Servicio();
-        servicio.setId(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del servicio")));
-        servicio.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del servicio"));
-        servicio.setCantidadPersonasACargo(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de personas a cargo del servicio")));
-        servicio.setCosto(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el costo del servicio")));
-        servicio.setDescripcion(JOptionPane.showInputDialog("Ingrese la descripción del servicio"));
+    public void agregarServicio(String nombre, String descripcion, double costo, int cantidadPersonasACargo){
+        Servicio servicio = new Servicio(nombre, descripcion, costo, cantidadPersonasACargo);
         
         NodoCola nuevoServicio = new NodoCola();
         nuevoServicio.setElementos(servicio);

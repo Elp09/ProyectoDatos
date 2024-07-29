@@ -118,7 +118,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
                 .addComponent(btnIniciarSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCerrar)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
