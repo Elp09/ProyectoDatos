@@ -4,9 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Rutina {
     private Pila pila;
+    private RutinaCola r_cola;
 
     public Rutina() {
         pila = new Pila();
+        r_cola = new RutinaCola();
     }
 
     public Usuario crearUsuario(String nombre, String apellido, String nickname, String password) { //Apila los usuarios, crea un nuevo usuario y nodo al mismo tiempo

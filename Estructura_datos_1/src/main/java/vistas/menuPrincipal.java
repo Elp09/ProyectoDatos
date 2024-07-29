@@ -1,14 +1,18 @@
 package vistas;
+
 import CatalogoServiciosPersonal.RutinaPersonalLDC;
 import com.mycompany.main.Rutina;
+import com.mycompany.main.RutinaCola;
 
 public class menuPrincipal extends javax.swing.JFrame {
+
     Rutina r;
     RutinaPersonalLDC rutinaPersonal;
-    
+    RutinaCola rutinaCola;
+
     public menuPrincipal(Rutina rutina, RutinaPersonalLDC rutinaPersonal) {
         this.rutinaPersonal = rutinaPersonal;
-        r= rutina;
+        r = rutina;
         initComponents();
     }
 
@@ -157,6 +161,13 @@ public class menuPrincipal extends javax.swing.JFrame {
         r.mostrarPila();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    public RutinaCola getRutinaCola() {
+        return rutinaCola;
+    }
+
+    public void setRutinaCola(RutinaCola rutinaCola) {
+        this.rutinaCola = rutinaCola;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
