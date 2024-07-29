@@ -9,6 +9,8 @@ public class Persona {
     private String segundoApellido;
     private String direccion;
     private String telefono;
+    private static int ultimo_id = 0;
+    private int id;
 
     public Persona(String cedula, String nombre, String primerApellido, String segundoApellido, String direccion, String telefono) {
         this.cedula = cedula;
@@ -17,6 +19,8 @@ public class Persona {
         this.segundoApellido = segundoApellido;
         this.direccion = direccion;
         this.telefono = telefono;
+        ultimo_id += 1;
+        id = ultimo_id;
     }
 
     public Persona(String cedula) {
@@ -26,6 +30,13 @@ public class Persona {
     public Persona() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     // Getters y Setters para cada atributo
     public String getCedula() {

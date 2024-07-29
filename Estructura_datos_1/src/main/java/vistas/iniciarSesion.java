@@ -1,11 +1,14 @@
 package vistas;
 
+import CatalogoServiciosPersonal.RutinaPersonalLDC;
 import com.mycompany.main.Rutina;
 
 public class iniciarSesion extends javax.swing.JFrame {
     Rutina r;
+    RutinaPersonalLDC rutinaPersonal;
 
-    public iniciarSesion(Rutina rutina) {
+    public iniciarSesion(Rutina rutina, RutinaPersonalLDC rutinaPersonal) {
+        this.rutinaPersonal = rutinaPersonal;
         r = rutina;
         initComponents();
     }
@@ -113,7 +116,7 @@ public class iniciarSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        menuPrincipal n = new menuPrincipal(r);
+        menuPrincipal n = new menuPrincipal(r, rutinaPersonal);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed
