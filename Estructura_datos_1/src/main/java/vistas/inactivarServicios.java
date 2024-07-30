@@ -1,15 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vistas;
 
-/**
- *
- * @author kevin
- */
-public class inactivarServicios extends javax.swing.JFrame {
+import com.mycompany.main.RutinaCola;
 
+
+public class inactivarServicios extends javax.swing.JFrame {
+    RutinaCola r = new RutinaCola();
     /**
      * Creates new form inactivarServicios
      */
@@ -109,6 +104,8 @@ public class inactivarServicios extends javax.swing.JFrame {
     }//GEN-LAST:event_txtServicioActionPerformed
 
     private void btnInactivarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInactivarServicioActionPerformed
+        String nombre = txtServicio.getText();
+        r.inactivarServicio(nombre);
 
     }//GEN-LAST:event_btnInactivarServicioActionPerformed
 
