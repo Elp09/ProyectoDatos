@@ -10,6 +10,7 @@ vistas\inactivarServicios$1.class
 vistas\inactivarServicios$3.class
 vistas\MenuPersonal$3.class
 CatalogoServiciosPersonal\RutinaPersonalLDC.class
+vistas\inactivarUsuarios$4.class
 vistas\agregarServicios$3.class
 vistas\menuServicios.class
 vistas\MenuPersonal$4.class
@@ -20,6 +21,7 @@ CatalogoServiciosPersonal\NodoLDC.class
 vistas\MenuPersonal$1.class
 vistas\editarServicios.class
 com\mycompany\main\RutinaCola.class
+vistas\MenuPersonal$5.class
 vistas\menuPrincipal$5.class
 vistas\agregarServicios$1.class
 CatalogoServiciosPersonal\LDC.class

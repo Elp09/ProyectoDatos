@@ -11,6 +11,7 @@ public class Persona {
     private String telefono;
     private static int ultimo_id = 0;
     private int id;
+    private String estado;
 
     public Persona(String cedula, String nombre, String primerApellido, String segundoApellido, String direccion, String telefono) {
         this.cedula = cedula;
@@ -19,6 +20,7 @@ public class Persona {
         this.segundoApellido = segundoApellido;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.estado = "Activo";
         ultimo_id += 1;
         id = ultimo_id;
     }
@@ -86,5 +88,14 @@ public class Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+    
+    // Getter para estado
+    public String getEstado() {
+        return estado != null ? estado : "Activo"; // Proveer un valor predeterminado
+    }
 
+    // Setter para estado
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
 }

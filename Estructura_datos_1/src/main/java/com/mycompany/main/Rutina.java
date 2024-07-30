@@ -75,9 +75,23 @@ public class Rutina {
         Nodo nodo = buscarUsuario(nickname);
         if (nodo == null) {
             JOptionPane.showMessageDialog(null, "El usuario no existe");
+        } else if (!nodo.getElemento().isEstado()) {
+            JOptionPane.showMessageDialog(null, "El usuario ya estaba inactivo");
         } else {
             nodo.getElemento().setEstado(false);
             JOptionPane.showMessageDialog(null, "El usuario fue inactivado exitosamente");
+        }
+    }
+    
+    public void reactivarUsuario(String nickname) {
+        Nodo nodo = buscarUsuario(nickname);
+        if (nodo == null) {
+            JOptionPane.showMessageDialog(null, "El usuario no existe");
+        } else if (nodo.getElemento().isEstado()) {
+            JOptionPane.showMessageDialog(null, "El usuario ya está activo");
+        } else {
+            nodo.getElemento().setEstado(true);
+            JOptionPane.showMessageDialog(null, "El usuario fue reactivado exitosamente");
         }
     }
 

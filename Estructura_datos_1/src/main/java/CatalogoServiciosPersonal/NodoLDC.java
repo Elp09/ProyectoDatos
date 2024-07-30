@@ -35,6 +35,4 @@ public class NodoLDC {
     public void setAnterior(NodoLDC anterior) {
         this.anterior = anterior;
     }
-    
-    
 }
