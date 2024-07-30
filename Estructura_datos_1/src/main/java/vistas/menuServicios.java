@@ -15,6 +15,8 @@ public class menuServicios extends javax.swing.JFrame {
      */
     public menuServicios() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Menu Principal");
     }
 
     /**

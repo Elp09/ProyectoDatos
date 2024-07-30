@@ -11,6 +11,8 @@ public class agregarUsuarios extends javax.swing.JFrame {
         this.rutinaPersonal = rutinaPersonal;
         r = rutina;
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Agregar usuarios");
     }
 
     @SuppressWarnings("unchecked")
@@ -136,8 +138,15 @@ public class agregarUsuarios extends javax.swing.JFrame {
         String apellido = txtApellido.getText();
         String usuario = txtUsuario.getText();
         String contraseña = txtContraseña.getText();
-        r.apilarUsuario(nombre, apellido, usuario, contraseña);
-        JOptionPane.showMessageDialog(null, "Usuario registrado con éxito");
+        
+        if (nombre.isEmpty() || apellido.isEmpty() || usuario.isEmpty() || contraseña.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Por favor, rellene todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (r.usuarioExiste(usuario)) {
+            JOptionPane.showMessageDialog(null, "El nombre de usuario ya existe. Por favor, elija otro.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            r.apilarUsuario(nombre, apellido, usuario, contraseña);
+            JOptionPane.showMessageDialog(null, "Usuario registrado con éxito");
+        }
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed

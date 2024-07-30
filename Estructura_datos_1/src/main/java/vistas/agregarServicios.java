@@ -14,6 +14,8 @@ public class agregarServicios extends javax.swing.JFrame {
      */
     public agregarServicios(JFrame menuPrincipal) {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Agregar Servicios");
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {

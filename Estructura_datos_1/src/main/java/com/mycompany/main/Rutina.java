@@ -24,7 +24,13 @@ public class Rutina {
     }
 
     public void apilarUsuario(String nombre, String apellido, String nickname, String password) {
-        pila.apilar(crearUsuario( nombre,  apellido,  nickname, password));
+         if (!usuarioExiste(nickname)) {
+            Usuario user = crearUsuario(nombre, apellido, nickname, password);
+            pila.apilar(user);
+            JOptionPane.showMessageDialog(null, "Usuario registrado con éxito");
+        } else {
+            JOptionPane.showMessageDialog(null, "El nombre de usuario ya existe. Por favor, elija otro.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public void apilar5Usuarios() {
@@ -90,6 +96,17 @@ public class Rutina {
 
     public void mostrarPila() {
         JOptionPane.showMessageDialog(null, pila.devolverString());
+    }
+    
+    public boolean usuarioExiste(String nickname) {
+        Nodo actual = pila.getCima();
+        while (actual != null) {
+            if (actual.getElemento().getNickname().equals(nickname)) {
+                return true; // Usuario encontrado
+            }
+            actual = actual.getSiguiente();
+        }
+        return false; // Usuario no encontrado
     }
 
     public Pila getPila() {

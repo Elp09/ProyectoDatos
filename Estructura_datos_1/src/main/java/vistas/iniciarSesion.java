@@ -11,6 +11,8 @@ public class iniciarSesion extends javax.swing.JFrame {
         this.rutinaPersonal = rutinaPersonal;
         r = rutina;
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Iniciar Sesion");
     }
 
     @SuppressWarnings("unchecked")

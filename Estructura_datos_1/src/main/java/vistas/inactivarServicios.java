@@ -15,6 +15,8 @@ public class inactivarServicios extends javax.swing.JFrame {
      */
     public inactivarServicios() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Inactivar Servicios");
     }
 
     /**

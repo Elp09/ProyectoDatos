@@ -15,6 +15,8 @@ public class editarServicios extends javax.swing.JFrame {
      */
     public editarServicios() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Editar Servicios");
     }
 
     /**

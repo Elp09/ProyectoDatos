@@ -10,6 +10,8 @@ public class inactivarUsuarios extends javax.swing.JFrame {
         this.rutinaPersonal = rutinaPersonal;
         r = rutina;
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Inactivar usuarios");
     }
 
     /**
