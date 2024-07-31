@@ -53,7 +53,7 @@ public class Rutina {
     }
 
     //Busca y devuelve un usuario por nickname
-    public Nodo buscarUsuario(String nickname) {;
+    public Nodo buscarUsuario(String nickname) {
         if (!pila.esVacia()) {
             Nodo top = pila.getCima();
             while (top != null) {
