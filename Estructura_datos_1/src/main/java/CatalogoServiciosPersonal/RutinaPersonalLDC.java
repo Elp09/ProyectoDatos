@@ -20,7 +20,7 @@ public class RutinaPersonalLDC {
     }
 
     public void agregar_personal(String cedula, String nombre, String primerApellido, String segundoApellido, String direccion, String telefono) {
-        if (persona_existe(cedula)) {
+        if (!persona_existe(cedula)) {
             NodoLDC nuevo_nodo = crear__nodo_persona(cedula, nombre, primerApellido, segundoApellido, direccion, telefono);
             lista_doble_personal.agregar(nuevo_nodo, null);
             JOptionPane.showMessageDialog(null, "La persona fue registrada con exito");
@@ -29,13 +29,20 @@ public class RutinaPersonalLDC {
         }
     }
 
-    public void mostrar_personal() {
-        lista_doble_personal.mostrar();
+    public boolean persona_existe(String cedula) {
+        NodoLDC actual = lista_doble_personal.getInicio();
+        if (actual != null) {
+            do {
+                if (actual.getPersona().getCedula().equals(cedula)) {
+                    return true;
+                }
+            } while (actual != lista_doble_personal.getInicio());
+        }
+        return false;
     }
 
-    //aqui va la verificacion en base a la cedula de la persona
-    public boolean persona_existe(String cedula) {
-        return true;
+    public void mostrar_personal() {
+        lista_doble_personal.mostrar();
     }
 
     public LDC getListaDoblePersonal() {
