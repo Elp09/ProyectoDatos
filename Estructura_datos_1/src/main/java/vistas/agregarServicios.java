@@ -12,17 +12,10 @@ public class agregarServicios extends javax.swing.JFrame {
     /**
      * Creates new form agregarSercivio
      */
-    public agregarServicios(JFrame menuPrincipal) {
+    public agregarServicios() {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Agregar Servicios");
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                menuPrincipal.setVisible(true);
-                dispose();
-            }
-        });
     }
 
     /**
@@ -135,7 +128,7 @@ public class agregarServicios extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPrecio)
                     .addComponent(txtprecioServicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblDescripcion)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -159,7 +152,9 @@ public class agregarServicios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarServicioActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-
+        menuPrincipal n = new menuPrincipal(r);
+        n.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed
 
 

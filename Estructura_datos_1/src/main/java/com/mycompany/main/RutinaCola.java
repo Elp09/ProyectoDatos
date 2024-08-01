@@ -16,7 +16,7 @@ public class RutinaCola {
         }
     }
     
-    //Método para determinar si el Servicio existe.
+    //Método para diferenciar servicios ya existentes
     public boolean existe(String nombre){
         NodoCola aux = inicio;
         boolean existe = false;
@@ -32,6 +32,22 @@ public class RutinaCola {
         }      
         return existe;
     }
+
+    //Método para Buscar un Servicio, busca servicio por medio de nombre de servicio.
+    public NodoCola buscarSercicio(String nombreServicio){
+        NodoCola aux = inicio;
+        if(!esVacio()){
+            while(aux != null){
+                if(aux.getElementos().getNombre().equals(nombreServicio)){
+                    return aux;
+                }else{
+                    aux = aux.getSiguiente();
+                }
+            }  
+        }
+        return null;
+    }
+    
     
     //Método para agregar un Servicio
     public void agregarServicio(String nombre, String descripcion, double costo, int cantidadPersonasACargo){
@@ -51,23 +67,36 @@ public class RutinaCola {
         }else{
             JOptionPane.showMessageDialog(null, "¡El servicio ya existe!");
         }
-    }
+    }    
     
     //Método para editar un Servicio
-    public void editarServicio(String nombre){
-        if(existe(nombre)){
+    public void editarServicio(Servicio servicioModificado, String nombre){
+        NodoCola aux = inicio;
         
-        }else{
-            JOptionPane.showMessageDialog(null, "¡El servicio ya existe!");
+        if(existe(nombre) ){
+            while(aux != null){
+                if(aux.getElementos().getNombre().equals(nombre)){
+                    aux.getElementos().setNombre(servicioModificado.getNombre());
+                    aux.getElementos().setDescripcion(servicioModificado.getDescripcion());
+                    aux.getElementos().setCosto(servicioModificado.getCosto());
+                    aux.getElementos().setCantidadPersonasACargo(servicioModificado.getCantidadPersonasACargo());                
+                }else{
+                    aux = aux.getSiguiente();
+                }                               
+            }
+        }else{            
+            JOptionPane.showMessageDialog(null, "¡El servicio no existe!");
         }    
     }
     
     //Método para inactivar un Servicio
-    public void inactivarServicio(String nombre){
-        if(existe(nombre)){
-        
+    public void inactivarServicio(String nombreServicio){
+        NodoCola nodo = buscarSercicio(nombreServicio);
+        if(nodo == null){
+            JOptionPane.showMessageDialog(null, "¡El fue servicio no fue encontrado");
         }else{
-            JOptionPane.showMessageDialog(null, "¡El servicio ya existe!");
+            JOptionPane.showMessageDialog(null, "El servicio fue inactivado exitosamente");
+            nodo.getElementos().setEstado(false);
         }    
     }
     

@@ -106,11 +106,12 @@ public class inactivarServicios extends javax.swing.JFrame {
     private void btnInactivarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInactivarServicioActionPerformed
         String nombre = txtServicio.getText();
         r.inactivarServicio(nombre);
-
     }//GEN-LAST:event_btnInactivarServicioActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-
+        menuPrincipal n = new menuPrincipal(r, rutinaPersonal);
+        n.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     /**

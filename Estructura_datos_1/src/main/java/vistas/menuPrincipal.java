@@ -32,6 +32,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnMenuPersonal = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        btnMenuServicios = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -80,6 +81,13 @@ public class menuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnMenuServicios.setText("Menú de Servicios");
+        btnMenuServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuServiciosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,8 +107,9 @@ public class menuPrincipal extends javax.swing.JFrame {
                             .addComponent(btnIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMenuPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(63, Short.MAX_VALUE))
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuServicios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,8 +126,10 @@ public class menuPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnMenuPersonal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnMenuServicios)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,6 +163,12 @@ public class menuPrincipal extends javax.swing.JFrame {
         r.mostrarPila();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void btnMenuServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuServiciosActionPerformed
+        menuServicios mS = new menuServicios(this, rutinaPersonal);
+        mS.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnMenuServiciosActionPerformed
+
     public RutinaCola getRutinaCola() {
         return rutinaCola;
     }
@@ -165,6 +182,7 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnInactivar;
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnMenuPersonal;
+    private javax.swing.JButton btnMenuServicios;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

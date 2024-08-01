@@ -8,6 +8,7 @@ public class Servicio {
     private String descripcion;
     private double costo;
     private int cantidadPersonasACargo;
+    private boolean estado;
 
     // Constructor vacío
     public Servicio() {
@@ -19,6 +20,7 @@ public class Servicio {
         this.descripcion = descripcion;
         this.costo = costo;
         this.cantidadPersonasACargo = cantidadPersonasACargo;
+        this.estado = true;
     }
     
     // Getters y Setters para cada atributo
@@ -62,4 +64,11 @@ public class Servicio {
         this.cantidadPersonasACargo = cantidadPersonasACargo;
     }
 
+    public boolean isEstado(){
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }    
 }

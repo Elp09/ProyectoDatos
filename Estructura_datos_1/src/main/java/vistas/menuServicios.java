@@ -1,19 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vistas;
 
-/**
- *
- * @author kevin
- */
+import com.mycompany.main.Rutina;
+
 public class menuServicios extends javax.swing.JFrame {
 
-    /**
-     * Creates new form menuUsuarios
-     */
-    public menuServicios() {
+    public menuServicios(Rutina rutina) {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Menu Principal");
@@ -29,22 +20,37 @@ public class menuServicios extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnAgregarServicios = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnEditarServicios = new javax.swing.JButton();
+        btnInactivarServicios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("MultiClean");
 
-        jButton1.setText("Agregar Servicios");
+        btnAgregarServicios.setText("Agregar Servicios");
+        btnAgregarServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarServiciosActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Menú de Servicios");
 
-        jButton2.setText("Editar Servicios");
+        btnEditarServicios.setText("Editar Servicios");
+        btnEditarServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarServiciosActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Inactivar Servicios");
+        btnInactivarServicios.setText("Inactivar Servicios");
+        btnInactivarServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInactivarServiciosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,19 +59,19 @@ public class menuServicios extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3)
+                    .addComponent(btnInactivarServicios)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(6, 6, 6)
-                            .addComponent(jButton2))
+                            .addComponent(btnEditarServicios))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(33, 33, 33)
                             .addComponent(jLabel1))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(10, 10, 10)
                             .addComponent(jLabel3))
-                        .addComponent(jButton1)))
-                .addContainerGap(190, Short.MAX_VALUE))
+                        .addComponent(btnAgregarServicios)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,16 +81,31 @@ public class menuServicios extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(btnAgregarServicios)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(btnEditarServicios)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(btnInactivarServicios)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarServiciosActionPerformed
+        agregarServicios as = new agregarServicios();
+        as.setVisible(true);
+    }//GEN-LAST:event_btnAgregarServiciosActionPerformed
+
+    private void btnEditarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarServiciosActionPerformed
+        editarServicios es = new editarServicios();
+        es.setVisible(true);
+    }//GEN-LAST:event_btnEditarServiciosActionPerformed
+
+    private void btnInactivarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInactivarServiciosActionPerformed
+        inactivarServicios es = new inactivarServicios();
+        es.setVisible(true);
+    }//GEN-LAST:event_btnInactivarServiciosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,15 +138,15 @@ public class menuServicios extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new menuServicios().setVisible(true);
+            
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnAgregarServicios;
+    private javax.swing.JButton btnEditarServicios;
+    private javax.swing.JButton btnInactivarServicios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
