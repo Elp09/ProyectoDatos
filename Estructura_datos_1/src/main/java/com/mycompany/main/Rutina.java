@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class Rutina {
     private Pila pila;
     private RutinaCola r_cola;
-    RutinaPersonalLDC rutinaPersonal;
+    private RutinaPersonalLDC rutinaPersonal;
 
     public Rutina() {
         pila = new Pila();
@@ -130,6 +130,24 @@ public class Rutina {
     public void setPila(Pila pila) {
         this.pila = pila;
     }
+
+    public RutinaCola getR_cola() {
+        return r_cola;
+    }
+
+    public void setR_cola(RutinaCola r_cola) {
+        this.r_cola = r_cola;
+    }
+
+    public RutinaPersonalLDC getRutinaPersonal() {
+        return rutinaPersonal;
+    }
+
+    public void setRutinaPersonal(RutinaPersonalLDC rutinaPersonal) {
+        this.rutinaPersonal = rutinaPersonal;
+    }
+    
+    
     
     
 

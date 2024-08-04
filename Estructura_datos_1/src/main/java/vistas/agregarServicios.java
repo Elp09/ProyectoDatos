@@ -1,6 +1,7 @@
 package vistas;
 
 import CatalogoServiciosPersonal.Servicio;
+import com.mycompany.main.Rutina;
 import com.mycompany.main.RutinaCola;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -8,14 +9,23 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class agregarServicios extends javax.swing.JFrame {
-    RutinaCola r = new RutinaCola();
-    /**
-     * Creates new form agregarSercivio
-     */
-    public agregarServicios() {
+    RutinaCola r;
+    Rutina rutina;
+
+    public agregarServicios(JFrame menuPrincipal, Rutina rutina) {
         initComponents();
+        r = rutina.getR_cola();
+        this.rutina = rutina;
         setLocationRelativeTo(null);
         setTitle("Agregar Servicios");
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                menuPrincipal.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**
@@ -152,7 +162,7 @@ public class agregarServicios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarServicioActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        menuPrincipal n = new menuPrincipal(r);
+        menuPrincipal n = new menuPrincipal(rutina);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed

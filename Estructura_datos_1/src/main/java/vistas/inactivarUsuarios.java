@@ -1,17 +1,26 @@
 package vistas;
 import CatalogoServiciosPersonal.RutinaPersonalLDC;
 import com.mycompany.main.Rutina;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 
 public class inactivarUsuarios extends javax.swing.JFrame {
     Rutina r;
-    RutinaPersonalLDC rutinaPersonal;
 
-    public inactivarUsuarios(Rutina rutina, RutinaPersonalLDC rutinaPersonal) {
-        this.rutinaPersonal = rutinaPersonal;
+    public inactivarUsuarios(JFrame menuPrincipal, Rutina rutina) {
         r = rutina;
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Inactivar usuarios");
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                menuPrincipal.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**
@@ -119,7 +128,7 @@ public class inactivarUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInactivarUsuarioActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        menuPrincipal n = new menuPrincipal(r, rutinaPersonal);
+        menuPrincipal n = new menuPrincipal(r);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed

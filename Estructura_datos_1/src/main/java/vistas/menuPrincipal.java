@@ -6,12 +6,13 @@ import com.mycompany.main.RutinaCola;
 
 public class menuPrincipal extends javax.swing.JFrame {
 
-    Rutina r;
+    public Rutina r;
     RutinaPersonalLDC rutinaPersonal;
     RutinaCola rutinaCola;
+    
+    
 
-    public menuPrincipal(Rutina rutina, RutinaPersonalLDC rutinaPersonal) {
-        this.rutinaPersonal = rutinaPersonal;
+    public menuPrincipal(Rutina rutina) {
         r = rutina;
         initComponents();
         setLocationRelativeTo(null);
@@ -136,25 +137,25 @@ public class menuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        iniciarSesion n = new iniciarSesion(r, rutinaPersonal);
+        iniciarSesion n = new iniciarSesion(this, r);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void btnInactivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInactivarActionPerformed
-        inactivarUsuarios n = new inactivarUsuarios(r, rutinaPersonal);
+        inactivarUsuarios n = new inactivarUsuarios(this, r);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnInactivarActionPerformed
 
     private void btnAgregarUsuario(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarUsuario
-        agregarUsuarios n = new agregarUsuarios(r, rutinaPersonal);
+        agregarUsuarios n = new agregarUsuarios(this, r);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnAgregarUsuario
 
     private void btnMenuPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuPersonalActionPerformed
-        MenuPersonal m = new MenuPersonal(this, rutinaPersonal);
+        MenuPersonal m = new MenuPersonal(this, r);
         m.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMenuPersonalActionPerformed
@@ -164,7 +165,7 @@ public class menuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btnMenuServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuServiciosActionPerformed
-        menuServicios mS = new menuServicios(this, rutinaPersonal);
+        menuServicios mS = new menuServicios(this, r);
         mS.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMenuServiciosActionPerformed

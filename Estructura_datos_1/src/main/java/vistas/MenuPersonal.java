@@ -3,6 +3,7 @@ package vistas;
 import CatalogoServiciosPersonal.NodoLDC;
 import CatalogoServiciosPersonal.Persona;
 import CatalogoServiciosPersonal.RutinaPersonalLDC;
+import com.mycompany.main.Rutina;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
@@ -12,11 +13,11 @@ public class MenuPersonal extends javax.swing.JFrame {
 
     RutinaPersonalLDC rutinaPersonal;
 
-    public MenuPersonal(JFrame menuPrincipal, RutinaPersonalLDC rutinaPersonalLDC) {
+    public MenuPersonal(JFrame menuPrincipal, Rutina rutina) {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Menu Personal");
-        rutinaPersonal = rutinaPersonalLDC;
+        rutinaPersonal = rutina.getRutinaPersonal();
 
         addWindowListener(new WindowAdapter() {
             @Override

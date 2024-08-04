@@ -1,13 +1,29 @@
 package vistas;
 
 import com.mycompany.main.Rutina;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 
 public class menuServicios extends javax.swing.JFrame {
+    
+    Rutina r;
+    JFrame menuPrincipal;
 
-    public menuServicios(Rutina rutina) {
+    public menuServicios(JFrame menuPrincipal, Rutina rutina) {
+        this.menuPrincipal = menuPrincipal;
+        this.r = rutina;
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Menu Principal");
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                menuPrincipal.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**
@@ -93,55 +109,20 @@ public class menuServicios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarServiciosActionPerformed
-        agregarServicios as = new agregarServicios();
+        agregarServicios as = new agregarServicios(menuPrincipal, r);
         as.setVisible(true);
     }//GEN-LAST:event_btnAgregarServiciosActionPerformed
 
     private void btnEditarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarServiciosActionPerformed
-        editarServicios es = new editarServicios();
+        editarServicios es = new editarServicios(menuPrincipal, r);
         es.setVisible(true);
     }//GEN-LAST:event_btnEditarServiciosActionPerformed
 
     private void btnInactivarServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInactivarServiciosActionPerformed
-        inactivarServicios es = new inactivarServicios();
+        inactivarServicios es = new inactivarServicios(menuPrincipal, r);
         es.setVisible(true);
     }//GEN-LAST:event_btnInactivarServiciosActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menuServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menuServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menuServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menuServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-            
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarServicios;

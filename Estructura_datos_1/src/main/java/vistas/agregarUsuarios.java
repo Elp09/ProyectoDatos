@@ -1,18 +1,28 @@
 package vistas;
-import CatalogoServiciosPersonal.RutinaPersonalLDC;
+
 import com.mycompany.main.Rutina;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class agregarUsuarios extends javax.swing.JFrame {
     Rutina r;
-    RutinaPersonalLDC rutinaPersonal;
+
     
-    public agregarUsuarios(Rutina rutina, RutinaPersonalLDC rutinaPersonal) {
-        this.rutinaPersonal = rutinaPersonal;
+    public agregarUsuarios(JFrame menuPrincipal, Rutina rutina) {
         r = rutina;
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Agregar usuarios");
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                menuPrincipal.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     @SuppressWarnings("unchecked")
@@ -150,7 +160,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        menuPrincipal n = new menuPrincipal(r, rutinaPersonal);
+        menuPrincipal n = new menuPrincipal(r);
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCerrarActionPerformed
