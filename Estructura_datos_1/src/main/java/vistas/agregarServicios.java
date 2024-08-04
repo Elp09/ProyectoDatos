@@ -50,7 +50,7 @@ public class agregarServicios extends javax.swing.JFrame {
         btnCerrar = new javax.swing.JButton();
         txtPersonasacargo = new javax.swing.JSpinner();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         lblNombre.setText("Nombre del Servicio:");
 

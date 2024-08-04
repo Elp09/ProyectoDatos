@@ -41,7 +41,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         btnIniciarSesion.setText("Registrarse");
         btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {

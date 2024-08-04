@@ -39,7 +39,7 @@ public class inactivarUsuarios extends javax.swing.JFrame {
         btnCerrar = new javax.swing.JButton();
         btnReactivar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel5.setText("MultiClean | Inactivar Usuarios");
 

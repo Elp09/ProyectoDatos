@@ -43,7 +43,7 @@ public class inactivarServicios extends javax.swing.JFrame {
         btnInactivarServicio = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel5.setText("MultiClean | Inactivar Servicios");
 

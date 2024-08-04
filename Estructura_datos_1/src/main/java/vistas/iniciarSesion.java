@@ -37,7 +37,7 @@ public class iniciarSesion extends javax.swing.JFrame {
         btnCerrar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel3.setText("Usuario:");
 

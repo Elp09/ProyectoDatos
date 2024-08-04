@@ -57,7 +57,7 @@ public class editarServicios extends javax.swing.JFrame {
         lblDescripcion = new javax.swing.JLabel();
         txtNombreServicio = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         txtprecioServicio.setValue(000);
 

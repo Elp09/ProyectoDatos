@@ -41,7 +41,7 @@ public class menuServicios extends javax.swing.JFrame {
         btnEditarServicios = new javax.swing.JButton();
         btnInactivarServicios = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel1.setText("MultiClean");
 
